@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+
     <title>Portafolio eefracotor</title>
 </head>
 <body>
     <header>
-        <h1> Elvin Efrain Conopoy T.</h1>
-        <p>@eefracotor</p>
-        <nav>
-            <a href="#">It's me</a>
-            <a href="#">Knowledges</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact me</a>
-        </nav>
-        <div>
+        <div class="menu">
+            <img class="pic-1" src="img/me.jpg" alt="Elvin Efrain Conopoy T">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="bar1" href="#sobre">It's me</a>
+                    </li>
+                    <li>
+                        <a class="bar2" href="#know">Knowledges</a>                    
+                    </li>
+                    <li>
+                        <a class="bar3" href="#project">Projects</a>
+                    </li>
+                    <li>
+                        <a class="bar4" href="#contac">Contact me</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+ <!--       <div>
             <div>
                 <a href="https:/wa.me/5511949684760" target="_blank">
                     <img src="img/Whatsapp.jpg" alt="WhatsApp" width="50">
@@ -37,12 +58,19 @@
                     <img src="img/Instagram.jpg" alt="Intagram" width="50">
                 </a>
             </div>
-        </div>
+        </div>-->
     </header>
-    <div>
-        <img src="img/me.jpg" alt="Elvin Efrain Conopoy T" width="250">
+    <div id="home">
+        <img class="pic-2" src="img/me.jpg" alt="Elvin Efrain Conopoy T">
+        <div class="name">
+            <h1> Elvin Efrain Conopoy T.</h1>
+        </div>
+
+        <div class="profession">
+            <p>Full-Stack Developer</p>
+        </div>
     </div>
-    <div>
+    <div id="sobre">
         <h2>It's me</h2>
         <p>
             Venezuelano, formado em Engenharia Informática, que tem como meta na vida não ser o melhor de vez, mas sim cada dia fazer o meu melhor para conseguir chegar aonde eu quero, sou cara que gosta das coisas simples, da familia, dos amigos, do crossfit, de andar de patins, da natureza e dos cachorros.
@@ -50,11 +78,11 @@
         <p>
             Graças à educação que me deram os meus pais, a minha experiência laboral foi um pouco diversa, tendo trabalhado com hoteleria, planos de férias para crianças, dando cursos de recreação para jovens, etc; porém foi de muita ajuda, pois juntando tudo o conhecimento adquirido eu posso buscar sempre um jeito de resolver alguma situação que possa acontecer, também eu me acho uma pessoa comprometida, responsável, humilde, franco, sempre na busca de melhoras. 
         </p>
-        <img src="img/20210919_092716.jpg" alt="RJ" width="100">
-        <img src="img/20211218_132902.jpg" alt="patins" width="300">
-        <img src="img/IMG_20211213_101554_318.jpg" alt="crossfit" width="200">
+        <img src="img/20210919_092716.jpg" alt="RJ">
+        <img src="img/20211218_132902.jpg" alt="patins">
+        <img src="img/IMG_20211213_101554_318.jpg" alt="crossfit">
     </div>
-    <div>
+    <div id="know">
         <h2>Knowledges</h2>
         <p>
             Enquanto eu me formava na faculdade, eu tive a chances aprender um pouco de POO, PHP, MySQL, HTML. CSS, C++, atualmente me esforçando para conseguir ampliar e melhorar os meus conhecimentos estou fazendo cursos on line (no momento esses cursos estão pausados) com conteúdo Java, NodeJS, Angular, JQuery, JAVA, além das linguagens nomeadas no começo do parágrafo.. 
@@ -63,7 +91,16 @@
             Sem medo ao sucesso e ciente das minhas virtudes e fraquezas estou na procura de uma chance de provar o meu potencial e a minha qualidade como profissional, estou atrás de uma vaga como Desenvolvedor Júnior com salário de ao menos R$ 5.000,00, querendo sempre de que isso seja só o começo e que eu possa ter as chances de crescer tanto no pessoal como profissionalmente.
         </p>
     </div>
-    <div>
+    <div id="project">
+        <h2>Projects</h2>
+        <p>
+            Enquanto eu me formava na faculdade, eu tive a chances aprender um pouco de POO, PHP, MySQL, HTML. CSS, C++, atualmente me esforçando para conseguir ampliar e melhorar os meus conhecimentos estou fazendo cursos on line (no momento esses cursos estão pausados) com conteúdo Java, NodeJS, Angular, JQuery, JAVA, além das linguagens nomeadas no começo do parágrafo.. 
+        </p> 
+        <p>
+            Sem medo ao sucesso e ciente das minhas virtudes e fraquezas estou na procura de uma chance de provar o meu potencial e a minha qualidade como profissional, estou atrás de uma vaga como Desenvolvedor Júnior com salário de ao menos R$ 5.000,00, querendo sempre de que isso seja só o começo e que eu possa ter as chances de crescer tanto no pessoal como profissionalmente.
+        </p>
+    </div>
+    <div id="contac">
         <h1>Contact me</h1>
         <div>
             <a href="https:/wa.me/5511949684760" target="_blank">
