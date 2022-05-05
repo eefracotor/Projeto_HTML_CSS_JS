@@ -9,7 +9,6 @@ header {
     height: 75px;
     margin-left: auto;
     text-align: center;
-    position: relative;
 
 }
 
@@ -31,11 +30,27 @@ nav ul li {
     list-style: none;
     margin-left: 100px;
     padding: 25px 0;
-    float: left;
+    float: left; 
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
     color: rgb(208, 208, 208);
     font-weight: 600;
+}
+
+nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background-color: rgb(208, 208, 208);
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
 }
