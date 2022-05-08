@@ -4,104 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  Hoja para reset estilos del navegador-->
+    <LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen> <!-- Hosja de estios personal-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Estilos de fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3dc191ae02.js" crossorigin="anonymous"></script>
     <title>Portafolio eefracotor</title>
 </head>
 <body>
-    <header>
-        <div class="menu">
-            <img class="pic-1" src="img/me.jpg" alt="Elvin Efrain Conopoy T">
-            <nav>
-                <ul>
-                    <li>
-                        <a class="bar1" href="#sobre">It's me</a>
-                    </li>
-                    <li>
-                        <a class="bar2" href="#know">Knowledges</a>                    
-                    </li>
-                    <li>
-                        <a class="bar3" href="#project">Projects</a>
-                    </li>
-                    <li>
-                        <a class="bar4" href="#contac">Contact me</a>
-                    </li>
-                    
-                </ul>
-            </nav>
-        </div>
- <!--       <div>
-            <div>
-                <a href="https:/wa.me/5511949684760" target="_blank">
-                    <img src="img/Whatsapp.jpg" alt="WhatsApp" width="50">
-                </a>
+    <header id="home">
+        <nav class="nav-bar">
+            <div class="avatar-1">
+                <img class="pic" src="img/me.jpg" alt="Elvin Efrain Conopoy T.">
             </div>
-            <div>
-                <a href="https://www.facebook.com/eefrain.conopoyt/">
-                    <img src="img/Facebook.jpg" alt="Facebook" width="50">
-                </a>
-            </div>
-            <div>
-                <a href="https://www.linkedin.com/in/elvin-efrain-conopoy-tortoza/" target="_blank">
-                    <img src="img/linkedin.jpg" alt="Linkedin" width="50">
-                </a>
-            </div>
-            <div>
-                <a href="https://www.instagram.com/eefracotor/" target="_blank">
-                    <img src="img/Instagram.jpg" alt="Intagram" width="50">
-                </a>
-            </div>
-        </div>-->
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="bar1" href="#home">It's me</a></li>
+                <li><a class="bar2" href="#formacao">Formação</a></li>
+                <li><a class="bar3" href="#know">Knowledges</a></li>
+                <li><a class="bar4" href="#project">Projects</a></li>
+                <li><a class="bar5" href="#contac">Contact me</a></li>
+            </ul>
+        </nav>
     </header>
-    <div id="home">
-        <img class="pic-2" src="img/me.jpg" alt="Elvin Efrain Conopoy T">
-        <div class="name">
-            <h1> Elvin Efrain Conopoy T.</h1>
-        </div>
-
-        <div class="profession">
-            <p>Full-Stack Developer</p>
-        </div>
-    </div>
-    <div id="sobre">
-        <h2>It's me</h2>
-        <p>
-            Venezuelano, formado em Engenharia Informática, que tem como meta na vida não ser o melhor de vez, mas sim cada dia fazer o meu melhor para conseguir chegar aonde eu quero, sou cara que gosta das coisas simples, da familia, dos amigos, do crossfit, de andar de patins, da natureza e dos cachorros.
-        </p>
-        <p>
-            Graças à educação que me deram os meus pais, a minha experiência laboral foi um pouco diversa, tendo trabalhado com hoteleria, planos de férias para crianças, dando cursos de recreação para jovens, etc; porém foi de muita ajuda, pois juntando tudo o conhecimento adquirido eu posso buscar sempre um jeito de resolver alguma situação que possa acontecer, também eu me acho uma pessoa comprometida, responsável, humilde, franco, sempre na busca de melhoras. 
-        </p>
-        <img src="img/20210919_092716.jpg" alt="RJ">
-        <img src="img/20211218_132902.jpg" alt="patins">
-        <img src="img/IMG_20211213_101554_318.jpg" alt="crossfit">
+    <main>
+        <section>
+            <div class="portada">
+                <img class="" src="img/portada.jpg" alt="portada">
+            </div>
+            <div>
+                <div class="avatar">
+                    <img class="pic" src="img/me.jpg" alt="Elvin Efrain Conopoy T">
+                </div>
+                <div class="titulo">
+                    <h1 class="name"> Elvin Conopoy.</h1> 
+                    <p class="profession">Full-Stack Developer</p>
+                </div>
+                <div class="presentacion">
+                    <h2>It's me</h2>
+                    <p>
+                        Venezuelano, formado em Engenharia Informática, que tem como meta na vida não ser o melhor de vez, mas sim cada dia fazer o meu melhor para conseguir chegar aonde eu quero, sou cara que gosta das coisas simples, da familia, dos amigos, do crossfit, de andar de patins, da natureza e dos cachorros.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="formacao">
+        <section class="sobre">
+            <h2>Formação</h2>
+            <div class="info">
+                <div class="agrup"> </div>
+                <div class="info-all">
+                    <p class="inf1">2011-2016</p>
+                    <p class="inf2">Ingeniero en Informática</p>
+                    <p class="inf3">Universidad Nororiental Privada Gran Mariscal de Ayacucho</p>
+                </div>
+            </div>
+            <div class="info">
+                <div class="agrup"> </div>
+                <div class="info-all">
+                    <p class="inf1">1996-2001</p>
+                    <p class="inf2">Técnico Medio Industrial - Men. Electricidad.</p>
+                    <p class="inf3">UE ETI Fundacion La Salle de ciencias Naturales</p>
+                </div>
+            </div>
+            <!-- <p>
+                Venezuelano, formado em Engenharia Informática, que tem como meta na vida não ser o melhor de vez, mas sim cada dia fazer o meu melhor para conseguir chegar aonde eu quero, sou cara que gosta das coisas simples, da familia, dos amigos, do crossfit, de andar de patins, da natureza e dos cachorros.
+            </p>
+            <p>
+                Graças à educação que me deram os meus pais, a minha experiência laboral foi um pouco diversa, tendo trabalhado com hoteleria, planos de férias para crianças, dando cursos de recreação para jovens, etc; porém foi de muita ajuda, pois juntando tudo o conhecimento adquirido eu posso buscar sempre um jeito de resolver alguma situação que possa acontecer, também eu me acho uma pessoa comprometida, responsável, humilde, franco, sempre na busca de melhoras. 
+            </p> -->
+            <!-- <img src="img/20210919_092716.jpg" alt="RJ">
+            <img src="img/20211218_132902.jpg" alt="patins">
+            <img src="img/IMG_20211213_101554_318.jpg" alt="crossfit"> -->
+        </section>
     </div>
     <div id="know">
-        <h2>Knowledges</h2>
+        <section class="sobre">
+            <h2>Experiência</h2>
+            <div class="info">
+                <div class="agrup"> </div>
+                <div class="info-all">
+                    <p class="inf1">2011-2016</p>
+                    <p class="inf2">Ingeniero en Informática</p>
+                    <p class="inf3">Universidad Nororiental Privada Gran Mariscal de Ayacucho</p>
+                </div>
+            </div>
+            <div class="info">
+                <div class="agrup"> </div>
+                <div class="info-all">
+                    <p class="inf1">1996-2001</p>
+                    <p class="inf2">Técnico Medio Industrial - Men. Electricidad.</p>
+                    <p class="inf3">UE ETI Fundacion La Salle de ciencias Naturales</p>
+                </div>
+            </div>
+        <!-- <h2>Knowledges</h2>
         <p>
             Enquanto eu me formava na faculdade, eu tive a chances aprender um pouco de POO, PHP, MySQL, HTML. CSS, C++, atualmente me esforçando para conseguir ampliar e melhorar os meus conhecimentos estou fazendo cursos on line (no momento esses cursos estão pausados) com conteúdo Java, NodeJS, Angular, JQuery, JAVA, além das linguagens nomeadas no começo do parágrafo.. 
         </p> 
         <p>
             Sem medo ao sucesso e ciente das minhas virtudes e fraquezas estou na procura de uma chance de provar o meu potencial e a minha qualidade como profissional, estou atrás de uma vaga como Desenvolvedor Júnior com salário de ao menos R$ 5.000,00, querendo sempre de que isso seja só o começo e que eu possa ter as chances de crescer tanto no pessoal como profissionalmente.
-        </p>
+        </p> -->
     </div>
     <div id="project">
-        <h2>Projects</h2>
-        <p>
-            Enquanto eu me formava na faculdade, eu tive a chances aprender um pouco de POO, PHP, MySQL, HTML. CSS, C++, atualmente me esforçando para conseguir ampliar e melhorar os meus conhecimentos estou fazendo cursos on line (no momento esses cursos estão pausados) com conteúdo Java, NodeJS, Angular, JQuery, JAVA, além das linguagens nomeadas no começo do parágrafo.. 
-        </p> 
-        <p>
-            Sem medo ao sucesso e ciente das minhas virtudes e fraquezas estou na procura de uma chance de provar o meu potencial e a minha qualidade como profissional, estou atrás de uma vaga como Desenvolvedor Júnior com salário de ao menos R$ 5.000,00, querendo sempre de que isso seja só o começo e que eu possa ter as chances de crescer tanto no pessoal como profissionalmente.
-        </p>
+        <!-- <div class="projects">
+            <h2>Projects</h2>
+            <p>
+                Enquanto eu me formava na faculdade, eu tive a chances aprender um pouco de POO, PHP, MySQL, HTML. CSS, C++, atualmente me esforçando para conseguir ampliar e melhorar os meus conhecimentos estou fazendo cursos on line (no momento esses cursos estão pausados) com conteúdo Java, NodeJS, Angular, JQuery, JAVA, além das linguagens nomeadas no começo do parágrafo.. 
+            </p> 
+            <p>
+                Sem medo ao sucesso e ciente das minhas virtudes e fraquezas estou na procura de uma chance de provar o meu potencial e a minha qualidade como profissional, estou atrás de uma vaga como Desenvolvedor Júnior com salário de ao menos R$ 5.000,00, querendo sempre de que isso seja só o começo e que eu possa ter as chances de crescer tanto no pessoal como profissionalmente.
+            </p>
+        </div> -->
+        <div class="projects">
+            <div>
+                <h2>Projetos</h2>
+            </div>
+            <div class="carta">
+                <div><img src="https://image.shutterstock.com/image-illustration/geometry-random-dimensional-wave-series-260nw-1831016305.jpg" alt="imagen aleatoria"></div>
+                <div>
+                    <h3>Nombre del projecto</h3>
+                    <p>Descripcion del proyecto : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus distinctio blanditiis illo velit. Molestiae, sequi expedita quo nostrum delectus dolor temporibus exercitationem laborum incidunt? Cum ipsum at atque esse neque?</p>
+                </div>
+                <div>
+                    <a href="#">Repositorio</a>
+                </div>
+                <div>
+                    <a href="#">Ver Demo</a>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="contac">
-        <h1>Contact me</h1>
+        <div class="contato">
+            <h2>Contact me</h2>
         <div>
             <a href="https:/wa.me/5511949684760" target="_blank">
                 <img src="img/Whatsapp.jpg" alt="WhatsApp" width="150">
@@ -121,6 +161,7 @@
             <a href="https://www.instagram.com/eefracotor/" target="_blank">
                 <img src="img/Instagram.jpg" alt="Intagram" width="150">
             </a>
+        </div>
         </div>
     </div>
 </body>
