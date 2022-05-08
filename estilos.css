@@ -90,17 +90,26 @@ main {
 }
 
 .avatar {
-    background-color: aqua;
+    position: relative;
+    top: -75px;
+    left: 75px;
     height: 175px;
     width: 175px;
+    justify-content: space-around;
+}
+
+.avatar-pic {
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     overflow: hidden;
-    position: absolute;
-    top: 50px;
-    left: 75px;
+    position: relative;
+    /* top: 75px;
+    left: 75px; */
 }
 
 .avatar-1 {
@@ -114,28 +123,56 @@ main {
     overflow: hidden;
 }
 
-.avat-r {
-    background-color: #b6b3b3;
-    width: 50px;
-    height: 50px;
-    
+.redes {
+    position: relative;
+    top: 25px;
 }
 
-.avat-r img {
-    max-width: 100%;
-    max-height: 100%;
+.contact-red {
+    background-color: #000;
+    position: relative;
+    top: 100px;
+}
+
+.avat-r1, .avat-r2, .avat-r3, .pic-red {
+    background-color: #b6b3b3;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    /* right: 0; */
+    /* margin: 0 auto; */
+    /* flex-direction: row; */
+
+}
+
+
+.avat-r1 {
+    left: 0;
+}
+
+.avat-r2 {
+    left: calc(50% - 25px);
+}
+
+.avat-r3 {
+    right: 0;
 }
 
 .pic {
     object-fit: cover;
     height: 100%;
     max-width: 100%;
-    
 }
 
 .titulo {
     position: relative;
-    top: 120px;
+    top: -50px;
     width: 100%;
     flex-direction: column;
     display: flex;
@@ -156,7 +193,7 @@ main {
 
 .presentacion {
     position: relative;
-    top: 150px;
+    top: -25px;
     width: 80%;
     margin: auto;
 }
@@ -164,7 +201,6 @@ main {
 #formacao {
     background-color: #966262;
     display: block;
-    margin-top: 200px;
     width: 100%;
     height: auto;
 }
@@ -332,8 +368,11 @@ form input, form textarea {
 
 for
  
-#contact {
-    height: auto;
+#contact .contato .content form {
+    background-color: #000;
+    color: #b6b3b3;
+    height: 450px;
+    width: 100%;
 }
 
 
