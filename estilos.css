@@ -8,7 +8,6 @@
 body {
     background-color: #b6b3b3;
     font-family: 'Josefin Sans', sans-serif;
-    /* display: inline; */
 }
 
 img {
@@ -21,7 +20,6 @@ header {
     display: flex;
     height: 50px;
     justify-content: center;
-    /* position: relative; */
     width: 100%;
 } 
 
@@ -29,10 +27,6 @@ main {
     position: relative;
     display: block;
 }
-
-/* nav {
-    width: 100%;
-} */
 
 .nav-bar {
     background-color: #3a3a3a;
@@ -99,6 +93,9 @@ main {
     background-color: aqua;
     height: 175px;
     width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
@@ -115,6 +112,18 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.avat-r {
+    background-color: #b6b3b3;
+    width: 50px;
+    height: 50px;
+    
+}
+
+.avat-r img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .pic {
@@ -165,12 +174,11 @@ main {
     width: 80%;
 }
 
-.sobre h2 {
+.sobre h2, .projects h2, .contato h2 {
     font-size: 35px;
     font-weight: 500;
     line-height: 75px;
     margin-left: 20px;
-    margin-bottom: 20px;
 }
 
 .info {
@@ -205,7 +213,6 @@ main {
      position: absolute;
      border-radius: 15%;
      margin-right: 30px;
-     /* transition: width 0.2s; */
  }
 
 #know {
@@ -217,16 +224,117 @@ main {
     background-color: #b6b3b3;
 }
 
+.projects {
+}
+
+.carta {
+    background-color: #fff;
+    flex-direction: column;
+    height: auto;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.carta img {
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.btn {
+    background-color: #3a3a3a;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    width: fit-content;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.btn-btn {
+    background-color: #3a3a3a;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+    text-transform: uppercase;
+}
+
+.btn-block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+}
+
+.intern {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.intern h3 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 50px;
+}
+
+.intern p {
+    font-size: 12px;
+    font-weight: 400;
+}
 
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+    height: 300px;
+    width: 90%;
+}
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+    width: 80%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
 
+form {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 400;
+}
 
+form input, form textarea {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
 
-
-
-
-
+for
+ 
+#contact {
+    height: auto;
+}
 
 
 
