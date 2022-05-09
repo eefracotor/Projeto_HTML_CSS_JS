@@ -87,12 +87,19 @@ main {
 
 .portada {
     height: 150px;
+    overflow: hidden;
 }
+
+.cont-avat {
+    margin: 0 auto;
+    height: 500px;
+}
+
 
 .avatar {
     position: relative;
     top: -75px;
-    left: 75px;
+    margin: 0 auto;
     height: 175px;
     width: 175px;
     justify-content: space-around;
@@ -108,8 +115,6 @@ main {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    /* top: 75px;
-    left: 75px; */
 }
 
 .avatar-1 {
@@ -128,13 +133,13 @@ main {
     top: 25px;
 }
 
+
 .contact-red {
-    background-color: #000;
     position: relative;
-    top: 100px;
+    bottom: -75px;
 }
 
-.avat-r1, .avat-r2, .avat-r3, .pic-red {
+.avat-r1, .avat-r2, .avat-r3, .avat-rw, .avat-rf, .avat-ri {
     background-color: #b6b3b3;
     border-radius: 50%;
     display: inline-block;
@@ -145,22 +150,25 @@ main {
     width: 50px;
     height: 50px;
     overflow: hidden;
-    /* right: 0; */
-    /* margin: 0 auto; */
-    /* flex-direction: row; */
+}
 
+.pic-re {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
 }
 
 
-.avat-r1 {
+.avat-r1, .avat-rw  {
     left: 0;
 }
 
-.avat-r2 {
+.avat-r2, .avat-rf {
     left: calc(50% - 25px);
 }
 
-.avat-r3 {
+.avat-r3, .avat-ri {
     right: 0;
 }
 
@@ -172,7 +180,7 @@ main {
 
 .titulo {
     position: relative;
-    top: -50px;
+    /* top: 115px; */
     width: 100%;
     flex-direction: column;
     display: flex;
@@ -193,29 +201,45 @@ main {
 
 .presentacion {
     position: relative;
-    top: -25px;
+    /* top: 30px; */
     width: 80%;
     margin: auto;
 }
 
 #formacao {
-    background-color: #966262;
+    background-color: #DEDEDE;
     display: block;
     width: 100%;
-    height: auto;
+    height: 250px;
 }
+
 
 .sobre, .projects, .contato {
     margin: auto;
     width: 80%;
 }
 
-.sobre h2, .projects h2, .contato h2 {
+
+.sobre h2, .projects h2, .contato h2, .presentacion h2 {
     font-size: 35px;
     font-weight: 500;
     line-height: 75px;
     margin-left: 20px;
 }
+
+.contato {
+    background-color: #000;
+    color: #b6b3b3;
+}
+
+
+#contact {
+    background-color: #000;
+    /* color: #b6b3b3; */
+    height: 750px;
+    width: 100%;
+}
+
 
 .info {
     margin: 15px 20px;
@@ -260,15 +284,12 @@ main {
     background-color: #b6b3b3;
 }
 
-.projects {
-}
-
 .carta {
     background-color: #fff;
     flex-direction: column;
     height: auto;
     width: 250px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 
 .carta img {
@@ -330,16 +351,6 @@ main {
     font-weight: 400;
 }
 
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 5%;
-    height: 300px;
-    width: 90%;
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -360,28 +371,24 @@ form {
     font-weight: 400;
 }
 
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+    height: 350px;
+    width: 90%;
+}
+
 form input, form textarea {
     width: 100%;
     border-radius: 5px;
     height: auto;
 }
 
-for
- 
-#contact .contato .content form {
-    background-color: #000;
-    color: #b6b3b3;
-    height: 450px;
-    width: 100%;
-}
-
-
-
-
-
-
-
-
+ .form {
+     line-height: 30px;
+ }
 
 
 
@@ -395,16 +402,11 @@ for
     } 
 
 
-    .nav-bar {
+    /* .nav-bar {
         width: 80%;
-    }
+    } */
 
-    .pic-1 {
-        /* visibility: hidden;
-        width: 1px;
-        float: left; 
-        padding: 3px;  */
-        
+    .pic-1 {        
         width: 140px;
         margin-left: 10px;
         margin-top: 10px;
@@ -420,18 +422,26 @@ for
     .nav-menu {
         top: 75px;
     }
+}
 
-    .avatar {
-        background-color: aqua;
-        height: 500px;
-        width: 500px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
+@media screen and (min-width: 620px) {
+
+    .presentacion {
+        width: 60%;
     }
-    
+
+    .sobre, .projects, .contato {
+        margin: auto;
+        width: 60%;
+    }
+
+    /* .projects {
+        margin: auto;
+        width: 60%;
+        display: inline-flex;
+        flex-direction: column;
+
+    } */
 }
 
     
@@ -473,6 +483,67 @@ for
 
     .nav-menu li a {
         font-size: 12px;
+    }
+
+    .sobre, .projects, .contato {
+        margin: auto;
+        width: 70%;
+    }
+
+    #project {
+        display: inline-flex;
+        flex-direction: column;
+
+    }
+
+    .carta {
+        display: inline;
+        float: left;
+    }
+    
+    .grande {
+        width: 45%;
+        margin: 10px 2%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .grande {
+        width: 31%;
+        margin: 5px 0.5% 5px;
+    }
+
+    #contato {
+        display: inline-flex;
+        flex-direction: column;
+
+    }
+    
+    #contact {
+        height: 500px;
+    }
+
+    .grande-f {
+        float: left;
+        width: 45%;
+        margin: 5px 0.5% 5px;
+    }
+
+    .contact-red {
+        bottom: -265px;
+    }
+
+    .avat-rw {
+        left: 5%;
+    }
+
+    .avat-rf {
+        left: 20%;
+    }
+
+    .avat-ri {
+        left: 35%;
     }
 }
 
