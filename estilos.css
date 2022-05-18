@@ -79,6 +79,7 @@ main {
 
 #check:checked ~ .nav-menu {
     height: 95vh;
+    z-index: 4;
 }
 
 #check:checked ~.nav-menu li {
