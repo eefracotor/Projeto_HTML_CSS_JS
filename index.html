@@ -222,11 +222,11 @@
                             <p class="formulario__input-error">El usuario debe poseer de 4 a 16 digitos y solo puede contener numeros, letras y guión bajo.</p>
                         </div>
         
-                        <!-- Grupo Correo Electronico -->
-                        <div class="formulario__grupo" id="grupo__correo">
-                            <label for="correo" class="formulario__label">Correo Electrónico</label>
+                        <!-- Grupo email Electronico -->
+                        <div class="formulario__grupo" id="grupo__email">
+                            <label for="email" class="formulario__label">Correo Electrónico</label>
                             <div class="formulario__grupo-input">
-                                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@electronico.com">
+                                <input type="email" class="formulario__input" name="email" id="email" placeholder="correo@electronico.com">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guión bajo.</p>
@@ -246,7 +246,8 @@
                         <div class="fomulario__grupo" id="grupo__mensaje">
                             <label for="mensaje" class="formulario__label">Mensaje</label>
                             <div class="formulario__grupo-input">
-                                <textarea class="formulario__input" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                <input class="formulario__input" name="mensaje" id="mensaje" cols="30" rows="10">
+                                <!-- <textarea class="formulario__input" name="mensaje" id="mensaje" cols="30" rows="10"></textarea> -->
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">Debe de escribir un mensaje</p>
@@ -273,32 +274,6 @@
 
                 </form>
             </div>
-            <!--
-            <div class="content grande-f">
-                <span>Quer entar en contacto conmigo?</span>
-                <span>É só preencher o formulario e tão rápido como seja possível, vou entrar em contato com você.</span>
-                <span>Ou se prefere, tambem pode me contatar pelas redes sociais.</span>
-            </div>
-
-             <form class="formulario grande-f" action="#">
-                <label for="nome">
-                    <span class="form"> Nome: </span> 
-                    <input type="text" name="nome" id="nome" placeholder="Jhonny Deep" required>
-                </label>
-                <label for="email">
-                    <span class="form"> E-mail: </span> 
-                    <input type="email" id="email" placeholder="teu@email.com" required>
-                </label>
-                <label for="asunto">
-                    <span class="form"> Asunto: </span> 
-                    <input type="text" name="asunto" id="asunto">
-                </label>
-                <label for="mensagem">
-                    <span class="form"> Mensagem: </span> 
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-                </label>
-                <button class="btn-btn" type="submit">Enviar</button>
-            </form> -->
         </div>
     </section>
     <!-- Fin Contato -->
