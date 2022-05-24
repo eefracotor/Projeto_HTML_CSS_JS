@@ -21,12 +21,12 @@
             <label for="check" class="bar-btn">
                 <i class="fa-solid fa-bars"></i>
             </label>
-            <ul class="nav-menu">
-                <li><a class="bar1" href="#home">It's me</a></li>
-                <li><a class="bar2" href="#formacao">Formação</a></li>
-                <li><a class="bar3" href="#know">Knowledges</a></li>
-                <li><a class="bar4" href="#project">Projects</a></li>
-                <li><a class="bar5" href="#contact">Contact me</a></li>
+            <ul class="nav-menu" id="menu-bar">
+                <li><a class="bar1" id="m-home" href="#home">It's me</a></li>
+                <li><a class="bar2" id="m-formacao" href="#formacao">Formação</a></li>
+                <li><a class="bar3" id="m-know" href="#know">Knowledges</a></li>
+                <li><a class="bar4" id="m-project" href="#project">Projects</a></li>
+                <li><a class="bar5" id="m-contact" href="#contact">Contact me</a></li>
             </ul>
         </nav>
     </header>
@@ -200,11 +200,11 @@
                             <p><span>Ou se prefere, tambem pode me contatar pelas redes sociais.</span></p> 
                         </div>
                         <div class="formulario__grupo-redes">
-                            <div class="info_contato contact-red">
-                                <span class="avat-rw"><a href="https:/wa.me/5511949684760" target="_blank"><img src="img/WS.png" alt="WhatsApp"></a></span>
-                                <span class="avat-rf"><a href="https://www.facebook.com/eefrain.conopoyt/" target="_blank"><img src="img/FB.png" alt="Facebook"></a></span>
-                                <span class="avat-ri"><a href="https://www.instagram.com/eefracotor/" target="_blank"><img src="img/IG.png" alt="Intagram"></a></span>
-                            </div>
+                            <!-- <div class="info_contato contact-red "> -->
+                                <div><p class="avat-rw"><a href="https:/wa.me/5511949684760" target="_blank"><img src="img/WS.png" alt="WhatsApp"></a></p></div>
+                                <div><p class="avat-rf"><a href="https://www.facebook.com/eefrain.conopoyt/" target="_blank"><img src="img/FB.png" alt="Facebook"></a></p></div>
+                                <div><p class="avat-ri"><a href="https://www.instagram.com/eefracotor/" target="_blank"><img src="img/IG.png" alt="Intagram"></a></p></div>
+                            <!-- </div> -->
                         </div>
                     </div>
                     <!-- <div class="formulario__grupo inf_contato">
@@ -219,7 +219,7 @@
                                 <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-                            <p class="formulario__input-error">El usuario debe poseer de 4 a 16 digitos y solo puede contener numeros, letras y guión bajo.</p>
+                            <p class="formulario__input-error">El nombre solo puede contener letras.</p>
                         </div>
         
                         <!-- Grupo email Electronico -->
@@ -229,17 +229,17 @@
                                 <input type="email" class="formulario__input" name="email" id="email" placeholder="correo@electronico.com">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-                            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guión bajo.</p>
+                            <p class="formulario__input-error">El correo debe tener el formato correo@eletronico.com y solo puede contener letras, numeros, puntos, guiones y guión bajo.</p>
                         </div>
         
                         <!-- Grupo asunto -->
                         <div class="fomulario__grupo" id="grupo__asunto">
                             <label for="asunto" class="formulario__label">Asunto</label>
                             <div class="formulario__grupo-input">
-                                <input type="text" class="formulario__input" name="asunto" id="asunto" placeholder="JohnDoe123">
+                                <input type="text" class="formulario__input" name="asunto" id="asunto" placeholder="Asunto">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-                            <p class="formulario__input-error">El asunto debe poseer de 4 a 16 digitos y solo puede contener numeros, letras y guión bajo</p>
+                            <p class="formulario__input-error">El asunto no puede ir en blanco.</p>
                         </div>
         
                         <!-- Grupo Mensaje -->

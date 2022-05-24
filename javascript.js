@@ -1,3 +1,28 @@
+///menu responsive
+
+let menu = document.getElementById('check')
+let opcion = document.querySelectorAll('#menu-bar a') //document.getElementById('m-home') 
+
+let enlace = {
+    home: false,
+    formacao: false,
+    know: false,
+    project: false, 
+    contact: false
+}
+menu.addEventListener('change', () => {
+   if(menu.checked){
+        opcion.forEach((opcion) => {
+            opcion.addEventListener('click', () => {
+                menu.checked = false
+            })
+        })
+    }else{
+        console.log('no se esta detectanto el evento')
+    }
+})
+
+// formulario
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
@@ -6,9 +31,9 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	asunto: /^[a-zA-Z0-9\ \_\-]{5,150}$/, // Letras, numeros, guion y guion_bajo
-	mensaje: /^[a-zA-ZÀ-ÿ\s]{5,200}$/ // Letras, numeros, guion y guion_bajo
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,//Letras nuemors, guione y guion bajo
+	asunto: /^[a-zA-ZÀ-ÿ\s\W]{5,25}$/, // Cualquier caractter maximo 50
+	mensaje: /^[a-zA-ZÀ-ÿ\s\W]{5,200}$/ // Cualqioer caracter maximo
 }
 
 const campos = {
