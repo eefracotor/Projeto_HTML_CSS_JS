@@ -1,15 +1,8 @@
 ///menu responsive
 
-let menu = document.getElementById('check')
-let opcion = document.querySelectorAll('#menu-bar a') //document.getElementById('m-home') 
+const menu = document.getElementById('check')
+const opcion = document.querySelectorAll('#menu-bar a')  
 
-let enlace = {
-    home: false,
-    formacao: false,
-    know: false,
-    project: false, 
-    contact: false
-}
 menu.addEventListener('change', () => {
    if(menu.checked){
         opcion.forEach((opcion) => {
@@ -27,13 +20,11 @@ const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
 
-// Expresiones regulares  
-
-const expresiones = {
+const expresiones = { // Expresiones regulares
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,//Letras nuemors, guione y guion bajo
 	asunto: /^[a-zA-ZÀ-ÿ\s\W]{5,25}$/, // Cualquier caractter maximo 50
-	mensaje: /^[a-zA-ZÀ-ÿ\s\W]{5,200}$/ // Cualqioer caracter maximo
+	mensaje: /^[a-zA-ZÀ-ÿ\s\W]{5,200}$/ // Cualqioer caracter maximo 200
 }
 
 const campos = {
@@ -59,7 +50,6 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.mensaje, e.target, 'mensaje');
 		break;
 	}
-
 }
 
 const validarCampo = (expresion, input, campo) => {
@@ -85,7 +75,6 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario)
 })
 
-
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault()
 
@@ -106,3 +95,5 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__completa').classList.add('formulario__completa-activo')
 	}
 })
+
+// API rest 

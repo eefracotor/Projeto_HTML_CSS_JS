@@ -489,13 +489,13 @@ main {
 }
 
 .intern h3 {
-    font-size: 20px;
+    font-size: 1.5em;
     font-weight: 800;
     line-height: 50px;
 }
 
 .intern p {
-    font-size: 12px;
+    font-size: 1em;
     font-weight: 400;
 }
 
@@ -541,18 +541,13 @@ form input, form textarea {
 
 
 
-/*Responsividad */
+/* ----- -----  Mediaqueries ----- ----- */
 
 @media screen and (min-width: 480px) {
     header {
         width: 100%;
         height: 75px;
     } 
-
-
-    /* .nav-bar {
-        width: 80%;
-    } */
 
     .pic-1 {        
         width: 140px;
@@ -592,6 +587,22 @@ form input, form textarea {
     } */
 }
 
+    
+@media screen and (max-width: 680px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+        grid-column: 1;
+    }
+
+    .formulario__btn {
+        width: 100%;
+    }
+}
     
 @media screen and (min-width: 760px) {
     header {
@@ -653,52 +664,32 @@ form input, form textarea {
         width: 45%;
         margin: 10px 2%;
     }
-        /* Formulario de contacto */
-        
-        .formulario {
-            /* display: grid; */
-            grid-template-columns: 1fr 1fr;
-            /* gap: 40px; */
-        }      
+    /* Formulario de contacto */
+    
+    .formulario {
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr;
+        /* gap: 40px; */
+    }      
 
-        .formulario__grupo-terminos,
-        .formulario__completa,
-        .formulario__grupo-btn-enviar,
-        .formulario__grupo-redes, /* probar comentando */
-        .formulario h2,
-        .inf_contato  {
-            grid-column: span 2;
-        }
+    .formulario__grupo-terminos,
+    .formulario__completa,
+    .formulario__grupo-btn-enviar,
+    .formulario__grupo-redes, /* probar comentando */
+    .formulario h2,
+    .inf_contato  {
+        grid-column: span 2;
+    }
 
-         /* ----- -----  Estilos para Validacion ----- ----- */
-        
-        
-        /* ----- -----  Mediaqueries ----- ----- */
-        
-        @media screen and (max-width: 680px) {
-            .formulario {
-                grid-template-columns: 1fr;
-            }
-        
-            .formulario__grupo-terminos,
-            .formulario__mensaje,
-            .formulario__grupo-btn-enviar {
-                grid-column: 1;
-            }
-        
-            .formulario__btn {
-                width: 100%;
-            }
-        }
-        
+        /* ----- -----  Estilos para Validacion ----- ----- */
+    
+    
+    
+    
     /* fin promuelario de contacto */
 }
 
 
-
-
-
-/*----------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 1000px) {
 
     .grande {
@@ -722,6 +713,19 @@ form input, form textarea {
         margin: 5px 0.5% 5px;
     }
 
+
+    .avatar {
+        margin-left: 25%;
+        height: 250px;
+        width: 250px;
+        
+    }
+
+    .avat-r1  {
+        left: 50px;
+    }
+
+
     .formulario__grupo-redes {
         width: 75%;
     }
@@ -729,10 +733,47 @@ form input, form textarea {
     .inf1, .inf3 {
         font-size: 0.75em;
     }
+
      .inf2 {
          font-size: 1.25em;
      }
 
+     .titulo {
+        top: -180px;
+        margin-left: 15%;
+    }
+
+    .name {
+        font-size: 4.5em;
+    }
+
+    .profession {
+        font-size: 1.5em;
+        margin-left: 7%;
+    }
+
+    .presentacion {
+        top: -20%;
+        margin-left: 40%;
+        width: 50%;
+    }
+
+    .presentacion p {
+        font-size: 1.5em;
+    }
+
+
+    .avat-r1 {
+        left: -50px;
+    }
+
+    .avat-r2 {
+        left: calc(50% - 60px);
+    }
+
+    .avat-r3 {
+        right: 25px;
+    }
     /* .contact-red {
         bottom: -25%;
     } */
