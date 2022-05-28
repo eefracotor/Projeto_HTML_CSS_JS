@@ -96,4 +96,108 @@ formulario.addEventListener('submit', (e) => {
 	}
 })
 
-// API rest 
+// API GitHub
+let div_orden = document.querySelector("div #projetos")
+
+function aleatorio() {
+    let inferior = 1
+    let superior = 5
+    let numPosibilidades = superior - inferior;
+    let aleatorio = Math.random() * (numPosibilidades + 1);
+    aleatorio = Math.floor(aleatorio);
+    return ale = inferior + aleatorio;
+}
+
+function creatCardRepos (titulo, descripcion, url_repos, url_demo) {
+    // Article
+    let card_repos = document.createElement("article")
+    card_repos.classList.add("carta", "grande")
+
+    // Imagen
+    let div_img = document.createElement("div")
+    div_img.classList.add("img_card")
+
+    function createImage() {
+        let al = aleatorio()
+        elem = document.createElement("img")
+        elem.src = "img/" + al + ".jpg"
+        elem.alt = al
+
+        return elem
+    }   
+
+    div_img.appendChild(createImage())
+
+
+   // Cuerpo del titulo
+   let body_title = document.createElement('div')
+   body_title.classList.add("intern")
+
+   let titulo_repos = document.createElement('h3')
+   titulo_repos.textContent = titulo
+   let descripcion_repos = document.createElement('p')
+   descripcion_repos.textContent = descripcion
+
+   body_title.appendChild(titulo_repos)
+   body_title.appendChild(descripcion_repos)
+
+   //botones
+   let body_btn = document.createElement('div')
+   body_btn.classList.add("btn-block")
+
+   let btn_repos = document.createElement('a')
+   btn_repos.href = url_repos
+   btn_repos.target = "_blank"
+   btn_repos.textContent = "Repositorio"
+   btn_repos.classList.add("btn")
+
+   let btn_demo = document.createElement('a')
+   btn_demo.href = url_demo
+   btn_demo.target = "_blank"
+   btn_demo.textContent = " Ver Demo"
+   btn_demo.classList.add("btn")
+
+   body_btn.appendChild(btn_repos)
+   body_btn.appendChild(btn_demo)
+
+   card_repos.appendChild(div_img)
+   card_repos.appendChild(body_title)
+   card_repos.appendChild(body_btn)
+
+
+   return card_repos
+
+}
+
+///API 
+
+function getApiGitHub () {
+    const resp = "https://api.github.com/users/eefracotor/repos" 
+    fetch(resp)
+    .then(async res =>  {
+        if (!res.ok) {
+            throw new Error(res.status)
+        }
+
+        var data = await res.json()
+        div_orden.innerHTML = ""
+        data.map(item => {
+            div_orden.appendChild(creatCardRepos (item.name, item.description, item.html_url, "http://" + item.homepage))
+
+        })
+
+    })
+    .catch(e => console.log(e))
+}
+
+getApiGitHub()
+
+// class ApiConection {
+    
+//     get API_URL(){
+//         return  "https://api.nasa.gov/planetary/apod"
+//     }
+//     get API_KEY() {
+//         return "563492ad6f91700001000001323185bdcaa5446e8989be6655fa21b8"
+//     }
+ 

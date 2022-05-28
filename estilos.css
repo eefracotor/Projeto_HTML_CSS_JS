@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 body {
     background-color: #b6b3b3;
@@ -11,9 +11,9 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
-/*Tamaño Mínimo de pantalla 320px*/
+/*Tamaño Mínimo de pantalla 360px*/
 
 header {
     background-color: #3a3a3a;
@@ -24,8 +24,9 @@ header {
 } 
 
 main {
-    position: relative;
     display: block;
+    height: 100vh;
+    position: relative;
 }
 
 .nav-bar {
@@ -69,7 +70,7 @@ main {
 }
 
 .nav-menu li a.active, .nav-menu li a:hover {
-    color: hsl(170, 96%, 39%);
+    color: hsl(197, 96%, 39%);
     transition: 0.3s;
 }
 
@@ -89,13 +90,19 @@ main {
 .portada {
     height: 150px;
     overflow: hidden;
+
 }
 
 .cont-avat {
     margin: 0 auto;
-    height: 500px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+.avatar, .titulo, .presentacion {
+    grid-column: span 2;
+}
 
 .avatar {
     position: relative;
@@ -150,13 +157,10 @@ main {
     align-items: center;
     position: absolute;
     bottom: 0;
-    width: 50px;
+    width:  50px;
     height: 50px;
     overflow: hidden;
 }
-
-
-
 
 .pic-re {
     border-radius: 50%;
@@ -164,7 +168,6 @@ main {
     height: 50px;
     overflow: hidden;
 }
-
 
 .avat-r1  {
     left: 35px;
@@ -186,10 +189,9 @@ main {
 
 .titulo {
     position: relative;
-    /* top: 115px; */
     width: 100%;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -207,7 +209,6 @@ main {
 
 .presentacion {
     position: relative;
-    /* top: 30px; */
     width: 80%;
     margin: auto;
 }
@@ -215,11 +216,16 @@ main {
 #formacao {
     background-color: #DEDEDE;
     display: block;
-    width: 100%;
-    height: 300px;
+    height: auto;
+    padding: 15px;
 }
 
-
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
 .sobre, .projects, .contato {
     margin: auto;
     width: 80%;
@@ -231,6 +237,10 @@ main {
     font-weight: 500;
     line-height: 75px;
     margin-left: 20px;
+}
+
+.project {
+    margin-bottom: 50px;
 }
 
 #contact {
@@ -252,140 +262,140 @@ main {
     cursor: pointer;
     }
     
-    .formulario__grupo-input {
-        position: relative;
-    }
-    
-    .formulario__input {
-        width: 85%;
-        background-color: #fff;
-        border: 3px solid transparent;
-        border-radius: 3px;
-        height: 45px;
-        font-size: 1em;
-        line-height: 45px;
-        padding: 0 40px 0 10px;
-        transition: .3 ease all;
-    }
-    
-    .formulario__input:focus {
-        border: 3px solid #0075ff;
-        outline: none;
-        box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
-    }
-    
-    .formulario__input-error {
-        font-size: 12px;
-        margin-bottom: 0;
-        margin-top: 10px;
-        display: none;
-    }
-    
-    .formulario__input-error-activo {
-        display: block;
-    }
-    
-    .formulario__validacion-estado {
-        position: absolute;
-        right: 5%;
-        bottom: 15px;
-        z-index: 100;
-        font-size: 1.5em;
-        opacity: 0;
-    }
-    
-    .formulario__checkbox {
-        margin-right: 10px;
-    }
-    
+.formulario__grupo-input {
+    position: relative;
+}
 
-    .formulario__grupo-redes {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20%;
-        margin-bottom: 5%;
-        position: relative;
-        width: 90%;
-    }
+.formulario__input {
+    width: 85%;
+    background-color: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    font-size: 1em;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3 ease all;
+}
     
-    .inf_contato p {
-        font-size: 17px;
-        line-height: 45px;
-    }
+.formulario__input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
     
-    .formulario__completa {
-        height: 45px;
-        line-height: 45px;
-        background: #f66060;
-        color: #000;
-        padding: 0 15px;
-        border-radius: 3px;
-        display: none;
-        margin-top: 15px;
-        font-size: 100%;
-        width: 100%;
-    }
+.formulario__validacion-estado {
+    position: absolute;
+    right: 5%;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+
+.formulario__grupo-redes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    position: relative;
+    width: 90%;
+}
     
-    .formulario__completa-activo {
-        display: block;
-    }
+.inf_contato p {
+    font-size: 17px;
+    line-height: 45px;
+}
+
+.formulario__completa {
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    color: #000;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+    margin-top: 15px;
+    font-size: 100%;
+    width: 100%;
+}
     
-    .formulario__completa p {
-        margin: 0;
-    }
+.formulario__completa-activo {
+    display: block;
+}
+
+.formulario__completa p {
+    margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15%;
+}
     
-    .formulario__grupo-btn-enviar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 15%;
-    }
+.formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: rgb(46, 46, 46);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1 ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0 30px rgba(103, 103, 103, 1);
+}
+
+.formulario__mensaje-exito {
+    font-size: 1.25em;
+    color: #119200;
+    display: none;
+    margin-top: 15px;
+}
     
-    .formulario__btn {
-        height: 45px;
-        line-height: 45px;
-        width: 30%;
-        background: rgb(46, 46, 46);
-        color: #fff;
-        font-weight: bold;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        transition: .1 ease all;
-    }
-    
-    .formulario__btn:hover {
-        box-shadow: 3px 0 30px rgba(103, 103, 103, 1);
-    }
-    
-    .formulario__mensaje-exito {
-        font-size: 1.25em;
-        color: #119200;
-        display: none;
-        margin-top: 15px;
-    }
-    
-    .formulario__mensaje-exito-activo {
-        display: block;
-    }
-    
-    .formulario__grupo-correcto .formulario__validacion-estado {
-        color: #1ed12d;
-        opacity: 1;
-    }
-    
-    .formulario__grupo-incorrecto .formulario__label {
-        color: #bb2929;
-    }
-    
-    .formulario__grupo-incorrecto .formulario__validacion-estado {
-        color: #bb2929;
-        opacity: 1;
-    }
-    
-    .formulario__grupo-incorrecto .formulario__input {
-        border: 3px solid #bb2929;
-    }
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
 
 
 .info {
@@ -409,23 +419,24 @@ main {
     margin-bottom: 5%;
  }
 
- .agrup {
-     background-color: #000;
-     content: '';
-     width: 5px;
-     display: inline-block;
-     width: 5px;
-     height: 80%;
-     top: 0;
-     position: absolute;
-     border-radius: 15%;
-     margin-right: 30px;
- }
+.agrup {
+    background-color: #000;
+    content: '';
+    width: 5px;
+    display: inline-block;
+    width: 5px;
+    height: 80%;
+    top: 0;
+    position: absolute;
+    border-radius: 15%;
+    margin-right: 30px;
+}
 
 #know {
     background-color: #3a3a3a;
     color: #b6b3b3;
-    height: 300px;
+    height: auto;
+    padding: 15px;
 }
 
 #know .agrup{
@@ -436,15 +447,26 @@ main {
     background-color: #fff;
     flex-direction: column;
     height: auto;
-    width: 250px;
+    width: 90%;
     margin: 0 auto 15px;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 5px 10px;
 }
 
-.carta img {
+.project {
+    height: auto;
+    padding: 15px;
+}
+
+.img_card {
     max-width: 90%;
     max-height: 90%;
     margin-left: 5%;
     margin-top: 5%;
+}
+
+.img_card img {
+    margin-top: 20px;
 }
 
 .btn {
@@ -452,13 +474,15 @@ main {
     border-width: 1px;
     border-style: solid;
     border-radius: 5px;
+    color: #fff;
     font-size: 12px;
     font-weight: 400;
-    color: #fff;
+    line-height: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 10px;
-    width: fit-content;
-    line-height: 50px;
     text-transform: uppercase;
+    width: 35%;
 }
 
 .btn-btn {
@@ -481,6 +505,11 @@ main {
     margin-top: auto;
 }
 
+.btn-block a {
+    text-align: center;
+    font-size: 80%;
+}
+
 .intern {
     display: flex;
     flex-direction: column;
@@ -497,6 +526,7 @@ main {
 .intern p {
     font-size: 1em;
     font-weight: 400;
+
 }
 
 .content {
@@ -511,35 +541,6 @@ main {
     padding: 15px;
     margin-bottom: 15px;
 }
-
-/* form {
-    margin: 0 auto;
-    width: 90%;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 5%;
-    height: 350px;
-    width: 90%;
-}
-
-form input, form textarea {
-    width: 100%;
-    border-radius: 5px;
-    height: auto;
-}
-
- .form {
-     line-height: 30px;
- } */
-
-
-
 
 /* ----- -----  Mediaqueries ----- ----- */
 
@@ -577,14 +578,6 @@ form input, form textarea {
         margin: auto;
         width: 60%;
     }
-
-    /* .projects {
-        margin: auto;
-        width: 60%;
-        display: inline-flex;
-        flex-direction: column;
-
-    } */
 }
 
     
@@ -607,7 +600,6 @@ form input, form textarea {
 @media screen and (min-width: 760px) {
     header {
         width: 100%;
-        height: 100px;
     } 
 
     .nav-bar {
@@ -660,6 +652,10 @@ form input, form textarea {
         float: left;
     }
     
+    .img_card img {
+        margin-top: 0px;
+    }
+    
     .grande {
         width: 45%;
         margin: 10px 2%;
@@ -667,10 +663,13 @@ form input, form textarea {
     /* Formulario de contacto */
     
     .formulario {
-        /* display: grid; */
         grid-template-columns: 1fr 1fr;
-        /* gap: 40px; */
-    }      
+    } 
+    /* fin promuelario de contacto */
+}
+
+
+@media screen and (min-width: 1000px) {
 
     .formulario__grupo-terminos,
     .formulario__completa,
@@ -680,21 +679,23 @@ form input, form textarea {
     .inf_contato  {
         grid-column: span 2;
     }
-
-        /* ----- -----  Estilos para Validacion ----- ----- */
-    
-    
-    
-    
-    /* fin promuelario de contacto */
 }
 
+@media screen and (min-width: 1300px) {
 
-@media screen and (min-width: 1000px) {
+    .presentacion {
+        width: 40%;
+        margin-top: -10%;
+        margin-left: 48%;
+    }
 
     .grande {
-        width: 31%;
-        margin: 5px 0.5% 5px;
+        width: 32%;
+        margin: 0.5% 0.5% 0.5%;
+    }
+
+    .portada {
+        height: 225px;
     }
 
     #contato {
@@ -706,13 +707,6 @@ form input, form textarea {
     #contact {
         height: auto;
     }
-
-    .grande-f {
-        float: left;
-        width: 45%;
-        margin: 5px 0.5% 5px;
-    }
-
 
     .avatar {
         margin-left: 25%;
@@ -740,133 +734,29 @@ form input, form textarea {
 
      .titulo {
         top: -180px;
-        margin-left: 15%;
+        width: 50%;
+        margin-left: 40%;
     }
 
     .name {
         font-size: 4.5em;
     }
 
-    .profession {
-        font-size: 1.5em;
-        margin-left: 7%;
+    .avat-r1, .avat-r2, .avat-r3, .avat-rw, .avat-rf, .avat-ri {
+        width:  75px;
+        height: 75px;
+    
     }
-
-    .presentacion {
-        top: -20%;
-        margin-left: 40%;
-        width: 50%;
-    }
-
-    .presentacion p {
-        font-size: 1.5em;
-    }
-
 
     .avat-r1 {
         left: -50px;
     }
 
     .avat-r2 {
-        left: calc(50% - 60px);
+        left: calc(50% - 75px);
     }
 
     .avat-r3 {
         right: 25px;
     }
-    /* .contact-red {
-        bottom: -25%;
-    } */
-
-    /* .avat-rw {
-        left: 5%;
-    }
-
-    .avat-rf {
-        left: calc(50% - 145px);
-    }
-
-    .avat-ri {
-        /* left: 35%; 
-        align-items: center;
-    } */
 }
-
-
-
-
-
-
-
-
-
-/* menu de hamburguesa para el proyecto
-link https://www.youtube.com/watch?v=Jwc6zju95us */
-
-/* .menu {
-    margin: 0 auto;
-    width: 900px;
-} */
-
-/* tamaño maximo de pantalla*/
-/*
-header {
-    background-color: rgb(39, 39, 39);
-    display: flex;
-    width: 100%;
-    height: 75px;
-    margin-left: auto;
-    text-align: center;
-
-}
-
-.menu {
-    background-color: rgb(39, 39, 39);
-    margin: 0 auto;
-    width: 900px;
-}
-.pic-1 {
-    width: 150px;
-    float: left; 
-    padding: 3px;
-}
-
-nav {
-    float: right;
-}
-
-nav ul li {
-    list-style: none;
-    margin-left: 100px;
-    padding: 25px 0;
-    float: left; 
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(208, 208, 208);
-    font-weight: 600;
-}
-
-nav ul li a::before {
-    display: block;
-    content: '';
-    width: 0%;
-    background-color: rgb(208, 208, 208);
-    height: 5px;
-    top: 0;
-    position: absolute;
-    transition: width 0.2s;
-}
-
-nav ul li a:hover::before {
-    width: 100%;
-}
-.portada img {
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
-    height: 350px;
-}*/
