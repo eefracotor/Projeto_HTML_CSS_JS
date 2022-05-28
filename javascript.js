@@ -182,7 +182,7 @@ function getApiGitHub () {
         var data = await res.json()
         div_orden.innerHTML = ""
         data.map(item => {
-            div_orden.appendChild(creatCardRepos (item.name, item.description, item.html_url, "http://" + item.homepage))
+            div_orden.appendChild(creatCardRepos (item.name, item.description, item.html_url, item.homepage))
 
         })
 
