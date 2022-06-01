@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 body {
     background-color: #b6b3b3;
@@ -20,12 +20,14 @@ header {
     display: flex;
     height: 50px;
     justify-content: center;
+    position: fixed;
+    z-index: 4;
     width: 100%;
 } 
 
 main {
     display: block;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -47,6 +49,7 @@ main {
 
 .nav-menu {
     position: fixed;
+    z-index: 5;
     width: 100%;
     height: 0;
     top: 50px;
@@ -250,7 +253,7 @@ main {
 
 .formulario {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1,1fr);
     gap: 40px;
 }
 
@@ -297,7 +300,7 @@ main {
     
 .formulario__validacion-estado {
     position: absolute;
-    right: 5%;
+    right: 1rem;
     bottom: 15px;
     z-index: 100;
     font-size: 1.5em;
@@ -544,6 +547,7 @@ main {
 
 /* ----- -----  Mediaqueries ----- ----- */
 
+
 @media screen and (min-width: 480px) {
     header {
         width: 100%;
@@ -568,23 +572,28 @@ main {
     }
 }
 
+@media screen and (min-wdth: 550px) {
+    .formulario__validacion-estado {
+        right: 2rem;
+    }
+}
+
 @media screen and (min-width: 620px) {
 
     .presentacion {
         width: 60%;
     }
 
-    .sobre, .projects, .contato {
-        margin: auto;
-        width: 60%;
+    .formulario__validacion-estado {
+        right: 2rem;
     }
 }
 
     
 @media screen and (max-width: 680px) {
-    .formulario {
+    /* .formulario {
         grid-template-columns: 1fr;
-    }
+    } */
 
     .formulario__grupo-terminos,
     .formulario__mensaje,
@@ -593,7 +602,7 @@ main {
     }
 
     .formulario__btn {
-        width: 100%;
+        width: 50%;
     }
 }
     
@@ -636,9 +645,13 @@ main {
         font-size: 12px;
     }
 
-    .sobre, .projects, .contato {
+     .sobre, .projects, .contato {
         margin: auto;
         width: 70%;
+    }
+
+    .formulario__validacion-estado {
+        right: 3rem;
     }
 
     #project {
@@ -663,7 +676,7 @@ main {
     /* Formulario de contacto */
     
     .formulario {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(1,1fr);
     } 
     /* fin promuelario de contacto */
 }
@@ -678,6 +691,13 @@ main {
     .formulario h2,
     .inf_contato  {
         grid-column: span 2;
+    }
+
+    .formulario {
+        grid-template-columns: repeat(2,1fr);
+    } 
+    .formulario__validacion-estado {
+        right: 1.5rem;
     }
 }
 
@@ -758,5 +778,8 @@ main {
 
     .avat-r3 {
         right: 25px;
+    }
+    .formulario__validacion-estado {
+        right: 2rem;
     }
 }
